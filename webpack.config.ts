@@ -1,4 +1,4 @@
-import webpack from 'webpack';
+import type {Configuration} from 'webpack';
 import path from 'path';
 import {buildWebpackConfig} from './config/build/buildWebpackConfig';
 import {BuildMode, BuildPaths} from './config/build/types/config';
@@ -12,7 +12,7 @@ const paths: BuildPaths = {
 const mode: BuildMode = 'development';
 const isDev = mode === 'development';
 
-const config: webpack.Configuration = buildWebpackConfig({
+const config: Configuration = buildWebpackConfig({
     mode: 'development',
     paths,
     isDev
