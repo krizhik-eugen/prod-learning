@@ -1,17 +1,22 @@
 import React, {lazy, Suspense} from 'react';
 import {Link, Route, Routes} from 'react-router-dom';
-import './index.scss'
+import './styles/index.scss'
+import UseTheme from './theme/useTheme';
 
-const LazyAbout = lazy(() => new Promise( resolve => {
+const LazyAbout = lazy(() => new Promise(resolve => {
     // @ts-ignore
     // only for testing lazy loading
-    setTimeout(() => resolve(import('./components/About/About')),1500)
-}) );
+    setTimeout(() => resolve(import('./components/About/About')), 1500)
+}));
 const LazyMain = lazy(() => import('./components/Main/Main'));
 
+
 const App = () => {
+
+    const {theme, toggleTheme} = UseTheme()
+
     return (
-        <div className='app'>
+        <div className={`app ${theme}`}>
             <div>
                 <Link to='/'>Main</Link>
                 <Link to='/about'>About</Link>
@@ -23,7 +28,7 @@ const App = () => {
                 </Routes>
             </Suspense>
 
-
+            <button onClick={toggleTheme}>Change theme</button>
         </div>
     );
 };
