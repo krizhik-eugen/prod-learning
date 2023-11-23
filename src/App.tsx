@@ -2,6 +2,7 @@ import React, {lazy, Suspense} from 'react';
 import {Link, Route, Routes} from 'react-router-dom';
 import './styles/index.scss'
 import UseTheme from './theme/useTheme';
+import {classNames} from './helpers/classNames/classNames';
 
 const LazyAbout = lazy(() => new Promise(resolve => {
     // @ts-ignore
@@ -16,7 +17,7 @@ const App = () => {
     const {theme, toggleTheme} = UseTheme()
 
     return (
-        <div className={`app ${theme}`}>
+        <div className={classNames('app', {}, [theme])}>
             <div>
                 <Link to='/'>Main</Link>
                 <Link to='/about'>About</Link>
