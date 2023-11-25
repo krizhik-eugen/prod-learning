@@ -1,16 +1,9 @@
 import React, {lazy, Suspense} from 'react';
 import {Link, Route, Routes} from 'react-router-dom';
-import './styles/index.scss'
-import UseTheme from './theme/useTheme';
-import {classNames} from './helpers/classNames/classNames';
-
-const LazyAbout = lazy(() => new Promise(resolve => {
-    // @ts-ignore
-    // only for testing lazy loading
-    setTimeout(() => resolve(import('./components/About/About')), 1500)
-}));
-const LazyMain = lazy(() => import('./components/Main/Main'));
-
+import UseTheme from 'app/providers/ThemeProvider/lib/useTheme';
+import {classNames} from 'shared/lib/classNames/classNames';
+import About from 'pages/About';
+import Main from 'pages/Main';
 
 const App = () => {
 
@@ -24,8 +17,8 @@ const App = () => {
             </div>
             <Suspense fallback={'Loading...'}>
                 <Routes>
-                    <Route path='/' element={<LazyMain/>}/>
-                    <Route path='/about' element={<LazyAbout/>}/>
+                    <Route path='/' element={<Main/>}/>
+                    <Route path='/about' element={<About/>}/>
                 </Routes>
             </Suspense>
 
