@@ -3,7 +3,7 @@ import {classNames} from 'shared/lib/classNames/classNames';
 import {AppRouter} from 'app/providers/router';
 import './styles/index.scss'
 import {Navbar} from 'widgets/Navbar';
-import {ThemeSwitcher} from 'shared/ui/ThemeSwitcher/ui/ThemeSwitcher';
+import {Sidebar} from 'widgets/Sidebar';
 
 const App = () => {
     const {theme} = UseTheme()
@@ -11,12 +11,11 @@ const App = () => {
 
     return (
         <div className={classNames('App', {}, [theme])}>
-
             <Navbar/>
-            <div>
+            <div className='content-page'>
+                <Sidebar/>
+                <AppRouter/>
             </div>
-            <AppRouter/>
-
         </div>
     );
 };
