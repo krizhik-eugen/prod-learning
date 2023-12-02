@@ -6,7 +6,7 @@ interface UseTheme {
     toggleTheme: () => void
 }
 
-const UseTheme = (): UseTheme => {
+const useTheme = (): UseTheme => {
     const {theme, setTheme} = useContext(ThemeContext);
     const newTheme = theme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT
     const toggleTheme = () => {
@@ -19,4 +19,4 @@ const UseTheme = (): UseTheme => {
     );
 };
 
-export default UseTheme;
+export default useTheme;
