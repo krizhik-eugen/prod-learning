@@ -15,3 +15,5 @@ declare module "*.svg" {
 
     export default ReactComponent;
 }
+
+declare const __IS_DEV__: boolean;
