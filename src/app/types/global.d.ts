@@ -3,12 +3,12 @@ declare module '*.scss' {
     export default content;
 }
 
-declare module "*.png"
-declare module "*.jpeg"
-declare module "*.jpg"
+declare module '*.png'
+declare module '*.jpeg'
+declare module '*.jpg'
 
-declare module "*.svg" {
-    import * as React from "react";
+declare module '*.svg' {
+    import * as React from 'react';
 
     const ReactComponent: React.FunctionComponent<
         React.SVGProps<SVGSVGElement>>;

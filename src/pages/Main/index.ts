@@ -1,3 +1,3 @@
 import { LazyMain as Main } from './ui/LazyMain';
 
-export  default  Main
+export default Main;
