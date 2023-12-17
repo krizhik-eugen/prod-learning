@@ -48,7 +48,9 @@ export const buildLoaders = ({ isDev }: BuildOptions): RuleSetRule[] => {
                 options: {
                     modules: {
                         auto: (path: string) => path.includes('.module.'),
-                        localIdentName: isDev ? '[path][name]__[local]--[hash:base64:5]' : '[hash:base64:8]',
+                        localIdentName: isDev
+                            ? '[path][name]__[local]--[hash:base64:5]'
+                            : '[hash:base64:8]',
                     },
                 },
             },

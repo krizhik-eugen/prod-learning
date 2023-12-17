@@ -4,7 +4,9 @@ export const classNames = (
     additional: string[] = [],
 ) => {
     const optionalClassnames = Object.entries(mods)
-        .filter(([key, value]) => value).map(([key, value]) => key);
+        .filter(([key, value]) => value)
+        .map(([key, value]) => key);
 
-    return [mainClass, ...optionalClassnames.filter(Boolean), ...additional].join(' ');
+    return [mainClass, ...optionalClassnames.filter(Boolean), ...additional]
+        .join(' ');
 };
