@@ -2,6 +2,7 @@ import webpack, { WebpackPluginInstance } from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 import { BuildOptions } from './types/config';
 
 export const buildPlugins = (options: BuildOptions): WebpackPluginInstance[] => {
@@ -22,6 +23,7 @@ export const buildPlugins = (options: BuildOptions): WebpackPluginInstance[] => 
     if (options.isDev) {
         plugins.push(new ReactRefreshWebpackPlugin({ overlay: false }));
         plugins.push(new webpack.HotModuleReplacementPlugin());
+        plugins.push(new BundleAnalyzerPlugin({ openAnalyzer: false }));
     }
 
     return plugins;
