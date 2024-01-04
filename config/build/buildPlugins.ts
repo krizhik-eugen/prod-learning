@@ -20,7 +20,7 @@ export const buildPlugins = (options: BuildOptions): WebpackPluginInstance[] => 
     ];
 
     if (options.isDev) {
-        plugins.push(new ReactRefreshWebpackPlugin());
+        plugins.push(new ReactRefreshWebpackPlugin({ overlay: false }));
         plugins.push(new webpack.HotModuleReplacementPlugin());
     }
 
