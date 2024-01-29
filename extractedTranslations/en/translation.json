@@ -7,5 +7,8 @@
   "Refresh the page": "Refresh the page",
   "Something went wrong": "Something went wrong",
   "Throw error": "Throw error",
-  "Toggle": "Toggle"
+  "Toggle": "Toggle",
+  "decrement": "decrement",
+  "increment": "increment",
+  "value": "value"
 }

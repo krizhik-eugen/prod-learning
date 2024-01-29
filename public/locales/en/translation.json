@@ -9,4 +9,7 @@
   "Main page": "Main page",
   "About": "About",
   "Login": "Login",
+  "increment": "increment",
+  "decrement": "decrement",
+  "value": "value"
 }
