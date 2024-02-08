@@ -11,6 +11,7 @@ const Main = () => {
             {t('Main page')}
 
             <Counter />
+
         </div>
     );
 };

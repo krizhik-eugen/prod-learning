@@ -11,5 +11,7 @@
   "Login": "Login",
   "increment": "increment",
   "decrement": "decrement",
-  "value": "value"
+  "value": "value",
+  "Enter login": "Enter login",
+  "Enter password": "Enter password"
 }

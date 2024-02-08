@@ -11,5 +11,7 @@
   "Login": "Войти",
   "increment": "увеличить",
   "decrement": "уменьшить",
-  "value": "значение"
+  "value": "значение",
+  "Enter login": "Введите логин",
+  "Enter password": "Введите пароль"
 }
