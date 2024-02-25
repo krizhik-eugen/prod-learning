@@ -105,7 +105,7 @@ export const SquareSizeXL: Story = {
     },
 };
 
-export const Dosabled: Story = {
+export const Disabled: Story = {
     args: {
         children: '>',
         theme: ButtonTheme.OUTLINE,
