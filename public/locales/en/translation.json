@@ -13,5 +13,8 @@
   "decrement": "decrement",
   "value": "value",
   "Enter login": "Enter login",
-  "Enter password": "Enter password"
+  "Enter password": "Enter password",
+  "Login form": "Login form",
+  "Wrong login or password": "Wrong login or password",
+  "Log out": "Log out"
 }

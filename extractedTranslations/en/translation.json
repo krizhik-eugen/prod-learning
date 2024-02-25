@@ -4,7 +4,9 @@
   "Enter password": "Enter password",
   "Enter user name": "Enter user name",
   "Language": "Language",
+  "Log out": "Log out",
   "Login": "Login",
+  "Login form": "Login form",
   "Main page": "Main page",
   "Name": "Name",
   "Page not found": "Page not found",
@@ -13,6 +15,7 @@
   "Something went wrong": "Something went wrong",
   "Throw error": "Throw error",
   "Toggle": "Toggle",
+  "Wrong login or password": "Wrong login or password",
   "decrement": "decrement",
   "increment": "increment",
   "value": "value"
