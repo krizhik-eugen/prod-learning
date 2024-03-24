@@ -1,8 +1,9 @@
 import { useTranslation } from 'react-i18next';
 import { BugButton } from 'app/providers/ErrorBoundary';
 import { Counter } from 'entities/Counter';
+import { memo } from 'react';
 
-const Main = () => {
+const Main = memo(() => {
     const { t } = useTranslation('main');
 
     return (
@@ -14,6 +15,6 @@ const Main = () => {
 
         </div>
     );
-};
+});
 
 export default Main;
